@@ -13,4 +13,4 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _on_Button_pressed():
-	get_tree().change_scene('scenes/Scene.tscn')
+	get_tree().change_scene('scenes/Player.tscn')

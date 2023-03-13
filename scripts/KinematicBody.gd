@@ -11,7 +11,6 @@ var angular_acceleration = 7
 
 func _physics_process(delta):
 	var direction = Vector3()
-	
 	if Input.is_action_pressed("ui_up"):
 		direction.z = -1
 	if Input.is_action_pressed("ui_down"):
@@ -37,6 +36,6 @@ func _physics_process(delta):
 	
 	vertical_vel += GRAVITY * delta
 	
-	#$MeshInstance.rotation.y = lerp_angle($MeshInstance.rotation.y, atan2(direction.x, direction.z), angular_acceleration*delta)
+	$MeshInstance.rotation.y = lerp_angle($MeshInstance.rotation.y, atan2(-direction.x, -direction.z), angular_acceleration*delta)
 	
 

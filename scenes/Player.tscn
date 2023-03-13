@@ -82,7 +82,7 @@ points = PoolVector3Array( -0.000131794, -0.0546824, 0.0363626, -0.000170152, -0
 [node name="Spatial" type="Spatial"]
 
 [node name="KinematicBody" type="KinematicBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.238041, 0 )
+transform = Transform( 0.0105241, 0, 0.999945, 0, 1, 0, -0.999945, 0, 0.0105241, 0, 0.238041, 0 )
 script = ExtResource( 6 )
 
 [node name="MeshInstance" type="MeshInstance" parent="KinematicBody"]
@@ -94,7 +94,7 @@ transform = Transform( 20.5766, -0.305007, -1.09079e-07, 0, -6.37073e-06, 17.813
 shape = SubResource( 2 )
 
 [node name="Camroot" type="Spatial" parent="KinematicBody"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0988977, 0 )
+transform = Transform( 0.0354227, 0, -0.999372, 0, 1, 0, 0.999372, 0, 0.0354227, 0, -0.0988977, 0 )
 script = ExtResource( 7 )
 
 [node name="h" type="Spatial" parent="KinematicBody/Camroot"]

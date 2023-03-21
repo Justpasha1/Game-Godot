@@ -6,8 +6,11 @@ const ROTATION = 10
 var vel = Vector3()
 var acceleration = 6
 var vertical_vel = 0
-var angular_acceleration = 7
+var angular_acceleration = 10
 
+
+func _ready():
+	var direction = Vector3.BACK.rotated(Vector3.UP, $Camroot/h.global_transform.basis.get_euler().y)
 
 func _physics_process(delta):
 	var direction = Vector3()
@@ -21,11 +24,15 @@ func _physics_process(delta):
 		direction.x = 1
 	
 	var h_rot = $Camroot/h.global_transform.basis.get_euler().y
-	direction = direction.rotated(Vector3.UP, h_rot).normalized()
+
 	
 	if direction:
 		direction *= SPEED * delta
+		direction = direction.rotated(Vector3.UP, h_rot).normalized()
+		$MeshInstance.rotation.y = lerp_angle($MeshInstance.rotation.y, atan2(-direction.x, -direction.z), angular_acceleration*delta)
 	
+	else:
+		$MeshInstance.rotation.y = lerp_angle($MeshInstance.rotation.y, $Camroot/h.rotation.y, delta * angular_acceleration)
 		
 	vel.x = direction.x
 	vel.z = direction.z
@@ -36,6 +43,7 @@ func _physics_process(delta):
 	
 	vertical_vel += GRAVITY * delta
 	
-	$MeshInstance.rotation.y = lerp_angle($MeshInstance.rotation.y, atan2(-direction.x, -direction.z), angular_acceleration*delta)
+
+	
 	
 

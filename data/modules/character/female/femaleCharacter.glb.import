@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/001.fbx-1a8e621f044a28db8d59925a53ebcadb.scn"
+path="res://.import/femaleCharacter.glb-27ef90c6369553684b2a33bf790f2e22.scn"
 
 [deps]
 
-source_file="res://data/modules/001.fbx"
-dest_files=[ "res://.import/001.fbx-1a8e621f044a28db8d59925a53ebcadb.scn" ]
+source_file="res://data/modules/character/female/femaleCharacter.glb"
+dest_files=[ "res://.import/femaleCharacter.glb-27ef90c6369553684b2a33bf790f2e22.scn" ]
 
 [params]
 

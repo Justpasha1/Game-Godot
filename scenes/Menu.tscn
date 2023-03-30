@@ -4,7 +4,7 @@
 [ext_resource path="res://scenes/Buttons/ButtonNewGame.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/Buttons/ButtonExit.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/Buttons/ButtonContinue.tscn" type="PackedScene" id=4]
-[ext_resource path="res://scripts/StartGame.gd" type="Script" id=5]
+[ext_resource path="res://scripts/ButtonNewGame.gd" type="Script" id=5]
 
 [node name="Menu" type="Node2D"]
 

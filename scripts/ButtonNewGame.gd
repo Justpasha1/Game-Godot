@@ -1,4 +1,4 @@
-extends "res://templates/ButtonTemplate.gd"
+extends "res://scripts/StartGame.gd"
 
 
 # Declare member variables here. Examples:
@@ -13,4 +13,4 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _on_Button_pressed():
-	get_tree().change_scene('scenes/Player.tscn')
+	get_tree().change_scene("res://scenes/Ship.tscn")
